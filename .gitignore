@@ -1,0 +1,80 @@
+# =========================
+# Global ignores
+# =========================
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+
+# =========================
+# Frontend (Vite + React)
+# =========================
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.eslintcache
+
+
+# =========================
+# Backend (Spring Boot Microservices)
+# =========================
+# Gradle
+**/build/
+**/.gradle/
+**/gradle/
+
+# Maven
+**/target/
+**/pom.xml.tag
+**/pom.xml.releaseBackup
+**/pom.xml.versionsBackup
+**/pom.xml.next
+**/release.properties
+**/*.iml
+**/dependency-reduced-pom.xml
+
+# STS
+**/.classpath
+**/.project
+**/.settings/
+**/.springBeans
+
+# IntelliJ
+**/.idea/
+**/*.iml
+**/*.iws
+**/.idea_modules/
+
+# VS Code
+**/.vscode/
+
+
+# =========================
+# Java / Spring Boot
+# =========================
+# Compiled files
+**/*.class
+
+# Package files
+**/*.jar
+**/*.war
+**/*.ear
+
+
+# =========================
+# Other
+# =========================
+*.swp
+*.swo
