@@ -1,0 +1,3 @@
+
+Get ALL Patients: 
+http://localhost:4000/patient/allpatients

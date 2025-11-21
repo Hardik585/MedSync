@@ -27,29 +27,25 @@ public class Patient {
 	private String email;
 	
 	@NotNull
-	private LocalDate birthDate;
+	private LocalDate dateOfBirth;
 	
 	@NotNull
-	private LocalDate RegisterDate;
-     
-	
-	 
-	public Patient(UUID id, @NotNull String name, @NotNull @Email String email, @NotNull LocalDate birthDate,
-			@NotNull LocalDate registerDate) {
+	private LocalDate registeredDate;
+
+	public Patient(UUID id, @NotNull String name, @NotNull @Email String email, @NotNull LocalDate dateOfBirth,
+			@NotNull LocalDate registeredDate) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
-		this.birthDate = birthDate;
-		RegisterDate = registerDate;
+		this.dateOfBirth = dateOfBirth;
+		this.registeredDate = registeredDate;
 	}
 
-	
 	public Patient() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
 
 	public UUID getId() {
 		return id;
@@ -75,28 +71,28 @@ public class Patient {
 		this.email = email;
 	}
 
-	public LocalDate getBirthDate() {
-		return birthDate;
+	public LocalDate getDateOfBirth() {
+		return dateOfBirth;
 	}
 
-	public void setBirthDate(LocalDate birthDate) {
-		this.birthDate = birthDate;
+	public void setDateOfBirth(LocalDate dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 
-	public LocalDate getRegisterDate() {
-		return RegisterDate;
+	public LocalDate getRegisteredDate() {
+		return registeredDate;
 	}
 
-	public void setRegisterDate(LocalDate registerDate) {
-		RegisterDate = registerDate;
+	public void setRegisterdDate(LocalDate registeredDate) {
+		this.registeredDate = registeredDate;
 	}
-
 
 	@Override
 	public String toString() {
-		return "Patient [id=" + id + ", name=" + name + ", email=" + email + ", birthDate=" + birthDate
-				+ ", RegisterDate=" + RegisterDate + "]";
+		return "Patient [id=" + id + ", name=" + name + ", email=" + email + ", dateOfBirth=" + dateOfBirth
+				+ ", registeredDate=" + registeredDate + "]";
 	}
+  
 	
 	
 }
