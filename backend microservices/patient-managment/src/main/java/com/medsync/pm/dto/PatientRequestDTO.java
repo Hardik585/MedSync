@@ -9,21 +9,21 @@ import jakarta.validation.constraints.Size;
 public class PatientRequestDTO {
 
 	@NotBlank
-	@Size(max=100 ,message="")
+	@Size(max = 100, message = "")
 	private String name;
-	
-	@NotBlank(message="email can't be null")
-	@Email(message="email should be valid")
+
+	@NotBlank(message = "email is required")
+	@Email(message = "email should be valid")
 	private String email;
-	
-	@NotBlank(message="address is required")
+
+	@NotBlank(message = "address is required")
 	private String address;
-	
-	@NotBlank(message="date of birth is required")
-	private LocalDate dateOfBirth;
-	
-	@NotBlank(message=" registerd date is required")
-	private LocalDate registeredDate;
+
+	@NotBlank(message = "date of birth is required")
+	private String dateOfBirth;
+
+	@NotBlank(message = " registerd date is required")
+	private String registeredDate;
 
 	public String getName() {
 		return name;
@@ -49,22 +49,20 @@ public class PatientRequestDTO {
 		this.address = address;
 	}
 
-	public LocalDate getDateOfBirth() {
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(LocalDate dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
-	public LocalDate getRegisteredDate() {
+	public String getRegisteredDate() {
 		return registeredDate;
 	}
 
-	public void setRegisteredDate(LocalDate registeredDate) {
+	public void setRegisteredDate(String registeredDate) {
 		this.registeredDate = registeredDate;
 	}
-	
-	
-	
+
 }

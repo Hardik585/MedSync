@@ -1,10 +1,10 @@
 package com.medsync.pm.service;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 import org.springframework.stereotype.Service;
 
+import com.medsync.pm.dto.PatientRequestDTO;
 import com.medsync.pm.dto.PatientResponseDTO;
 import com.medsync.pm.entity.Patient;
 import com.medsync.pm.mapper.PatientMapper;
@@ -22,10 +22,15 @@ public class PatientServiceImpl implements PatientService {
 	@Override
 	public List<PatientResponseDTO> getPatients() {
 		List<Patient> allPatient = patientRepo.findAll();
-		List<PatientResponseDTO> list = allPatient.stream()
-				                                  .map((patient) -> PatientMapper.toDTO(patient))
-				                                  .toList();
+		List<PatientResponseDTO> list = allPatient.stream().map((patient) -> PatientMapper.toDTO(patient)).toList();
 		return list;
+	}
+
+	@Override
+	public PatientResponseDTO createPatient(PatientRequestDTO reqDTO) {
+		Patient newPatient = PatientMapper.toEntity(reqDTO);
+		Patient patient = patientRepo.save(newPatient);
+		return PatientMapper.toDTO(patient);
 	}
 
 }

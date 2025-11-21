@@ -10,6 +10,7 @@ public class PatientResponseDTO {
 	private UUID id;
 	private String name;	
 	private String email;
+	private String address;
 	private LocalDate dateOfBirth;
 	private LocalDate registeredDate;
 	public UUID getId() {
@@ -29,6 +30,13 @@ public class PatientResponseDTO {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
