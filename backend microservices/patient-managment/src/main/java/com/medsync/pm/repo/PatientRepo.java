@@ -10,4 +10,9 @@ import com.medsync.pm.entity.Patient;
 @Repository
 public interface PatientRepo extends JpaRepository<Patient, UUID> {
 
+//	public String findByEmail(String email);
+	
+	public boolean existsByEmail(String email);
+	
+	public boolean existsByEmailAndIdNot(String email , UUID id);
 }

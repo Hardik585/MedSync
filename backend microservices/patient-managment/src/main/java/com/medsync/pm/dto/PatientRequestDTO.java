@@ -1,6 +1,7 @@
 package com.medsync.pm.dto;
 
-import java.time.LocalDate;
+
+import com.medsync.pm.dto.validators.CreatePatientValidationGroup;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -22,7 +23,7 @@ public class PatientRequestDTO {
 	@NotBlank(message = "date of birth is required")
 	private String dateOfBirth;
 
-	@NotBlank(message = " registerd date is required")
+	@NotBlank( groups = CreatePatientValidationGroup.class ,message = " registerd date is required")
 	private String registeredDate;
 
 	public String getName() {
